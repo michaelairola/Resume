@@ -1,0 +1,163 @@
+
+:root {
+	--resume-width: 797px;
+	--resume-height: 1219px;
+	/*--resume-height: 1230px;*/
+	/*--resume-height: 1235px;*/
+	--padding-top: 55px;
+	--margin-top: -40px;
+	--resume-margins: 100px auto 100px auto;
+}
+
+/*8.27in x 11.69in*/
+
+.resume {
+	page-break-after: avoid;
+	width: var(--resume-width);
+	height: var(--resume-height);
+	margin: var(--resume-margins);
+	box-shadow: 0 0 10px rgba(88,88,95,0.12);
+	border: 1px solid #e8ecf0;
+}
+
+.row {
+	position: relative;
+	right: 3px;
+	margin-top: var(--margin-top);
+	padding-top: var(--padding-top);
+	padding-bottom: 20px;
+	font-family: Tahoma, sans-serif;
+	display: flex;
+	width: 110%;
+	border: solid 1px transparent;
+}
+
+.selectedRow {
+	border: solid 1px #e8ecf0;
+	border-left: solid 1px transparent;
+	box-shadow: 0 0 10px rgba(88,88,95,0.12);
+	background-color: white;
+	z-index: 100;
+}
+
+.outside-box {
+	position: absolute;
+	margin-top: -56px;
+	height: 100%;
+	width: 100px;
+	left: -103px;
+}
+.selectedOuterBox {
+	border: solid 1px #e8ecf0;
+	border-right: solid 0px transparent;
+	box-shadow: 0 0 10px rgba(88, 88, 95, 0.12);
+	background-color: #fcfcfc;
+	z-index: 100;
+}
+
+.left {
+	width: 200px;
+	color: #0187de;
+	text-align: right;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.right {
+	width: 583px;
+}
+
+.mid {
+	width: 33px;
+}
+
+.line1 {
+	position: relative;
+	width: 0px;
+	height: 100%;
+	margin: auto;
+	margin-top: 1px;
+	background-color: rgb(151, 151, 151);
+	border: solid 1px rgb(151, 151, 151);
+}
+.line2 {
+	position: relative;
+	width: 0px;
+	height: 18px;
+	margin: auto;
+	border: solid 1px rgb(151, 151, 151);
+	background-color: rgb(151, 151, 151);
+}
+
+.smallCircleContainer {
+	width: 15px;
+	height: 15px;
+	margin: auto;
+}
+.largeCircleContainer {
+	width: 65px;
+	height: 65px;
+	margin-right: 10px;
+}
+.circle {
+	background-color: white;
+ 	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+}
+.small-circle {
+	margin: auto;
+	border: solid 1px rgb(151, 151, 151);
+}
+.large-circle {
+	border: solid 2px rgb(1, 135, 222);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#header {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+#info {
+	margin-left: 40px;
+	line-height: 1.5;
+}
+
+#initials {
+	text-transform: uppercase;
+	font-size: 30px;
+}
+
+#name {
+	color: #0187de;
+	font-size: 35px;
+	line-height: 44px;
+	font-family: arial;
+	font-stretch: 100%;
+	font-weight: 400;
+}
+
+.xpList {
+	margin: 0 50px 0 -10px;
+	line-height: 2.0;
+}
+.xpName {
+	font-size: 25px;
+	color: rgb(1, 135, 222);
+}
+.xpTime {
+	margin: 10px;
+}
+.xpDescription {
+	font-size: 18px;
+	line-height: 1;
+
+}
+
+
