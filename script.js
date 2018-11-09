@@ -1,4 +1,4 @@
-const info = {
+const infoData = {
 	Name: "Michael Airola",
 	Email: 'mik3airol@gmail.com',
 	Cell: '(831) 210-9163',
@@ -41,17 +41,16 @@ const renderXP = exp => {
 	return response;
 }
 
-// const render = template => {
-// 	const id = template.name;
-	// const { [key]: keyTemplate } 
-// 	document.getElementById(id).innerHTML = template
-// }
+const render = template => {
+	const id = template.name;
+	document.getElementById(id).innerHTML = template()
+}
 
 
-const infoTemp = `
-<div id="name">${info.Name}</div>
-<div id=""><span id="cell">${info.Cell}</span> | <span id="email">${info.Email}</span></div>
-<div id="address">${info.Address}</div>
+const info = () => `
+<div id="name">${infoData.Name}</div>
+<div id=""><span id="cell">${infoData.Cell}</span> | <span id="email">${infoData.Email}</span></div>
+<div id="address">${infoData.Address}</div>
 `;
 
 const profSummaryTemp = 'hi';
@@ -78,8 +77,7 @@ const addSelectRowClass = rowDiv => {
 window.onload = function() {
 	document.querySelectorAll('.row').forEach(rowDiv => addSelectRowClass(rowDiv));
 
-
-	document.getElementById("info").innerHTML = infoTemp;
+	render(info)
 	document.getElementById("professional-summary").innerHTML = profSummaryTemp;
 	document.getElementById("skills").innerHTML = skillsTemp;
 	document.getElementById("work-history").innerHTML = workHistTemp;	
