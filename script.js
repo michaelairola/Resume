@@ -1,11 +1,28 @@
+// simple render functions 
+
+const renderById = template => {
+	const id = template.name;
+	document.getElementById(id).innerHTML = template()
+}
+const renderByClass = template => {
+	const id = template.name;
+	document.querySelectorAll(`.${id}`).forEach(circle => {
+		circle.innerHTML = template()
+	});
+}
+
+
+// DATA CONFIGURATION FOR TEMPLATE
 const infoData = {
 	Name: "Michael Airola",
 	Email: 'mik3airol@gmail.com',
 	Cell: '(831) 210-9163',
 	Address: '425 Purisima Ave, 94086 Sunnyvale CA'
 }
-const jobTemplate = `Full stack software developer for FQ Systems`;
-const experience = {
+const professionalSummary = () => 'hi';
+const workHistory = () => 'Full stack software developer for FQ Systems';
+const education = () => 'sup dog';
+const skillsData = {
 	"Javascript": { time: "2 years",
 		description: `Creation of dynamic content with Vanilla JS, TypeScript, JSX, 
 					  and WebComponents (specifically LitHTML).`,
@@ -31,70 +48,69 @@ const experience = {
 	}
 };
 
-const renderXP = exp => {
+
+
+// templates 
+
+const skills = () => {
 	let response = '<ul class="xpList">';
-	for (let i in exp) {
-		response += `<li class="xpItem"><div><span class="xpName">${i}</span><span class="xpTime">(${exp[i].time})</span></div>
-						<div class="xpDescription">${exp[i].description}</div></li>`
+	for (let i in skillsData) {
+		response += `<li class="xpItem"><div><span class="xpName">${i}</span><span class="xpTime">(${skillsData[i].time})</span></div>
+						<div class="xpDescription">${skillsData[i].description}</div></li>`
 	}
 	response += "</ul>"
 	return response;
 }
-
-const render = template => {
-	const id = template.name;
-	document.getElementById(id).innerHTML = template()
-}
-
-
 const info = () => `
 <div id="name">${infoData.Name}</div>
 <div id=""><span id="cell">${infoData.Cell}</span> | <span id="email">${infoData.Email}</span></div>
 <div id="address">${infoData.Address}</div>
 `;
+const smallCircleContainer = () => `<div class="circle small-circle"></div>`;
+const largeCircleContainer = () => `<div class="circle large-circle"><text id="initials">MA</text></div>`;
 
-const profSummaryTemp = 'hi';
-const skillsTemp = renderXP(experience);
-const workHistTemp = 'howya doin\'<br>hi';
-const educationTemp = 'sup dog';
-
-const smallCircleTemplate = `<div class="circle small-circle"></div>`
-const createSmallCircle = circle => {circle.innerHTML = smallCircleTemplate;}
-const largeCircleTemplate = `<div class="circle large-circle"><text id="initials">MA</text></div>`
-
-const addSelectRowClass = rowDiv => {
-	rowDiv.addEventListener('mouseover', (e) => {
-		rowDiv.classList.add('selectedRow');
-		rowDiv.querySelector('.outside-box').classList.add('selectedOuterBox');
-	});
-	rowDiv.addEventListener('mouseout', (e) => {
-		rowDiv.classList.remove('selectedRow');
-		rowDiv.querySelector('.outside-box').classList.remove('selectedOuterBox');
-	});
+const setResumeMargins = margins => {
+	document.getElementById('resume').style.margin = margins;
 }
 
+const rowsListenToMouseOver = () => {
+	document.querySelectorAll('.row').forEach(rowDiv => {
+		rowDiv.addEventListener('mouseover', _ => {
+			rowDiv.classList.add('selectedRow');
+			rowDiv.querySelector('.outside-box').classList.add('selectedOuterBox');
+		})
+		rowDiv.addEventListener('mouseout', (e) => {
+			rowDiv.classList.remove('selectedRow');
+			rowDiv.querySelector('.outside-box').classList.remove('selectedOuterBox');
+		});
+	})
+}
 
 window.onload = function() {
-	document.querySelectorAll('.row').forEach(rowDiv => addSelectRowClass(rowDiv));
+	// mouse-over event triggers selectedRow class
+	rowsListenToMouseOver();
 
-	render(info)
-	document.getElementById("professional-summary").innerHTML = profSummaryTemp;
-	document.getElementById("skills").innerHTML = skillsTemp;
-	document.getElementById("work-history").innerHTML = workHistTemp;	
-	document.getElementById("education").innerHTML = educationTemp;	
+	renderByClass(smallCircleContainer);
+	renderByClass(largeCircleContainer);
 
-	document.querySelectorAll(".smallCircleContainer").forEach(circle => createSmallCircle(circle));
-	document.querySelector(".largeCircleContainer").innerHTML = largeCircleTemplate;
+	// rendering with simple render function at the top of the page
+	renderById(info)
+	renderById(professionalSummary)
+	renderById(skills);
+	renderById(workHistory)
+	renderById(education)
 
+	// For printing the page properly
     window.onbeforeprint = () => {
-	    const resume = document.getElementById('resume');
-	    resume.style.margin = "0px";
-	}
-
+    	
+    	document.getElementById('resume').style.marginTop = "0px";
+    	setResumeMargins("0px auto 0px auto");
+    	document.querySelectorAll(".row").forEach(rowDiv => rowDiv.style.width = "100%");
+    };
 	window.onafterprint = () => {
-		const resume = document.getElementById('resume');
-		resume.style.margin = "var(--resume-margins)";
-	}	
+		setResumeMargins("var(--resume-margins)");
+    	document.querySelectorAll(".row").forEach(rowDiv => rowDiv.style.width = "110%");
+	}
 }
 
 
