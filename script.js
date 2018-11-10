@@ -51,7 +51,6 @@ const skillsData = {
 
 
 // templates 
-
 const skills = () => {
 	let response = '<ul class="xpList">';
 	for (let i in skillsData) {
@@ -69,10 +68,18 @@ const info = () => `
 const smallCircleContainer = () => `<div class="circle small-circle"></div>`;
 const largeCircleContainer = () => `<div class="circle large-circle"><text id="initials">MA</text></div>`;
 
+
 const setResumeMargins = margins => {
 	document.getElementById('resume').style.margin = margins;
 }
-
+const setRowWidth = width => {
+	document.querySelectorAll(".row").forEach(rowDiv => rowDiv.style.width = width);
+}
+const removeSelectedRowClass = () => {
+	document.querySelectorAll('.row').forEach(rowDiv => {
+		console.log('rowDiv', rowDiv.classList);
+		rowDiv.classList.remove("selectedRow")})
+}
 const rowsListenToMouseOver = () => {
 	document.querySelectorAll('.row').forEach(rowDiv => {
 		rowDiv.addEventListener('mouseover', _ => {
@@ -90,10 +97,9 @@ window.onload = function() {
 	// mouse-over event triggers selectedRow class
 	rowsListenToMouseOver();
 
+	// rendering with simple render function at the top of the page
 	renderByClass(smallCircleContainer);
 	renderByClass(largeCircleContainer);
-
-	// rendering with simple render function at the top of the page
 	renderById(info)
 	renderById(professionalSummary)
 	renderById(skills);
@@ -102,14 +108,13 @@ window.onload = function() {
 
 	// For printing the page properly
     window.onbeforeprint = () => {
-    	
-    	document.getElementById('resume').style.marginTop = "0px";
+    	removeSelectedRowClass();
     	setResumeMargins("0px auto 0px auto");
-    	document.querySelectorAll(".row").forEach(rowDiv => rowDiv.style.width = "100%");
+    	setRowWidth("100%");
     };
 	window.onafterprint = () => {
 		setResumeMargins("var(--resume-margins)");
-    	document.querySelectorAll(".row").forEach(rowDiv => rowDiv.style.width = "110%");
+		setRowWidth("110%");
 	}
 }
 
