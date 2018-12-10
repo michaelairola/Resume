@@ -19,9 +19,9 @@ const infoData = {
 	Cell: '(831) 210-9163',
 	Address: '425 Purisima Ave, 94086 Sunnyvale CA'
 }
-const professionalSummary = () => 'hi';
+const professionalSummary = () => 'This is my professional Summary';
 const workHistory = () => 'Full stack software developer for FQ Systems';
-const education = () => 'sup dog';
+const education = () => 'B.S. Mathematics, Physics Minor. University California, Santa Barbara';
 const skillsData = {
 	"Javascript": { time: "2 years",
 		description: `Creation of dynamic content with Vanilla JS, TypeScript, JSX, 
