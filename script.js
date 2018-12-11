@@ -14,38 +14,36 @@ const renderByClass = template => {
 
 // DATA CONFIGURATION FOR TEMPLATE
 const infoData = {
-	Name: "Michael Airola",
-	Email: 'mik3airol@gmail.com',
-	Cell: '(831) 210-9163',
-	Address: '425 Purisima Ave, 94086 Sunnyvale CA'
+	Name: "First Last (Name)",
+	Email: 'Email@Email.Email',
+	Cell: '(123) 456-7890',
+	Address: 'Address goes here!'
 }
-const professionalSummary = () => 'This is my professional Summary';
-const workHistory = () => 'Full stack software developer for FQ Systems';
-const education = () => 'B.S. Mathematics, Physics Minor. University California, Santa Barbara';
+const professionalSummary = () => 'professional summary goes here!';
+const workHistory = () => 'Work history goes here!';
+const education = () => 'education history goes here!';
 const skillsData = {
-	"Javascript": { time: "2 years",
-		description: `Creation of dynamic content with Vanilla JS, TypeScript, JSX, 
-					  and WebComponents (specifically LitHTML).`,
+	"Skill 1": { time: "forever",
+		description: `Skill 1 description goes here!`,
 	},
-	"Redux": { time: "3 months",
-		description: ``,
+	"Skill 2": { time: "forever ever",
+		description: `Skill 2 description goes here!`,
 	},
-	"GoLang": { time: "6 months",
-		description: "Backend experience with Go for business logic and database models",
+	"Skill 3": { time: "five ever!",
+		description: `Skill ${1 + 2} goes here!`,
 	},
-	"SQL": { time: "1 year", 
-		description: "Database querying for data-analytics projects and work related DB projects",
-	},
-	"HTML/CSS": { time: "4 years",
-		description: "Content for personal and professional websites",
-	},
-	"Unix/Systems Programming": { time: "2 years",
-		description: `Using bash on personal and work computers and servers.
-					  Familiarity with Git version control, npm, and `,
-	},
-	"Ruby": { time: "2 years",
-		description: "Development of share box for personal cloud storage",
-	}
+	// "": { time: "", 
+	// 	description: "",
+	// },
+	// "": { time: "",
+	// 	description: "",
+	// },
+	// "": { time: "",
+	// 	description: ``,
+	// },
+	// "": { time: "",
+	// 	description: "",
+	// }
 };
 
 
