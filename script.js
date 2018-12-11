@@ -19,32 +19,36 @@ const infoData = {
 	Cell: '(831) 210-9163',
 	Address: '425 Purisima Ave, 94086 Sunnyvale CA'
 }
-const professionalSummary = () => 'This is my professional Summary';
-const workHistory = () => 'Full stack software developer for FQ Systems';
+const professionalSummary = () => 'Full-stack software engineer dedicated to clean code and sound business logic';
+const workHistory = () => 'Software developer for FQ Systems';
 const education = () => 'B.S. Mathematics, Physics Minor. University California, Santa Barbara';
 const skillsData = {
-	"Javascript": { time: "2 years",
+	"Javascript": { time: "2.5 years",
 		description: `Creation of dynamic content with Vanilla JS, TypeScript, JSX, 
-					  and WebComponents (specifically LitHTML).`,
+					  and WebComponents (specifically LitHTML). Interest (and understanding) of React as well.`,
 	},
-	"Redux": { time: "3 months",
-		description: ``,
+	"Redux": { time: "6 months",
+		description: `Understanding of the state management framework 
+		creating UIs for complex data models`,
 	},
 	"GoLang": { time: "6 months",
-		description: "Backend experience with Go for business logic and database models",
+		description: "Backend experience with Go for business logic and database models (specifically, used the GORM framework from github)",
 	},
 	"SQL": { time: "1 year", 
-		description: "Database querying for data-analytics projects and work related DB projects",
+		description: `Database modeling and querying for data-analytics 
+			projects and work related DB projects. Specific database name 
+			used was 'RoachSQL'`,
 	},
 	"HTML/CSS": { time: "4 years",
 		description: "Content for personal and professional websites",
 	},
 	"Unix/Systems Programming": { time: "2 years",
-		description: `Using bash on personal and work computers and servers.
-					  Familiarity with Git version control, npm, and `,
+		description: `Using bash on personal laptop, work computers and servers.`,
 	},
-	"Ruby": { time: "2 years",
-		description: "Development of share box for personal cloud storage",
+	"Production Application Managment": { time: "2 years",
+		description: `Git version control, npm, ruby, 
+			webpack, grunt and docker for application management systems. Knowledge of 
+			Istio, kubernetes, and Google Cloud Platforms for production-side development`,
 	}
 };
 
@@ -65,6 +69,7 @@ const info = () => `
 <div id=""><span id="cell">${infoData.Cell}</span> | <span id="email">${infoData.Email}</span></div>
 <div id="address">${infoData.Address}</div>
 `;
+
 const smallCircleContainer = () => `<div class="circle small-circle"></div>`;
 const largeCircleContainer = () => `<div class="circle large-circle"><text id="initials">MA</text></div>`;
 
@@ -103,7 +108,7 @@ window.onload = function() {
 	renderById(info)
 	renderById(professionalSummary)
 	renderById(skills);
-	renderById(workHistory)
+	// renderById(workHistory)
 	renderById(education)
 
 	// For printing the page properly
