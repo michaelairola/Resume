@@ -141,12 +141,23 @@
 	font-weight: 400;
 }
 
+#professionalSummary {
+	padding-right: 10%;
+	padding-left: 5%;
+	text-align: center;
+	font-size: 17.5px;
+	line-height: 2;
+}
+
 .xpList {
-	margin: 0 50px 0 -10px;
+	margin: -30px 50px 0 -10px;
 	line-height: 2.0;
 }
+.xpItem{
+	margin-top: 20px;
+}
 .xpName {
-	font-size: 25px;
+	font-size: 20px;
 	color: rgb(1, 135, 222);
 }
 .xpTime {
@@ -154,7 +165,7 @@
 }
 .xpDescription {
 	font-size: 18px;
-	line-height: 1.1;
+	line-height: 1.2;
 
 }
 

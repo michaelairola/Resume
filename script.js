@@ -11,7 +11,6 @@ const renderByClass = template => {
 	});
 }
 
-
 // DATA CONFIGURATION FOR TEMPLATE
 const infoData = {
 	Name: "Michael Airola",
@@ -19,47 +18,47 @@ const infoData = {
 	Cell: '(831) 210-9163',
 	Address: '425 Purisima Ave, 94086 Sunnyvale CA'
 }
-const professionalSummary = () => 'Full-stack software engineer dedicated to clean code and sound business logic';
+const professionalSummary = () => 
+`<b>Full-stack Engineer</b> <br>
+Current stack: FE - Javascript, BE - GoLang, DB - SQL`
+;
 const workHistory = () => 'Software developer for FQ Systems';
-const education = () => 'B.S. Mathematics, Physics Minor. University California, Santa Barbara';
+const education = () => 'B.S. Mathematics, Physics Minor from UC Santa Barbara 2016';
 const skillsData = {
 	"Javascript": { time: "2.5 years",
-		description: `Creation of dynamic content with Vanilla JS, TypeScript, JSX, 
-					  and WebComponents (specifically LitHTML). Interest (and understanding) of React as well.`,
-	},
-	"Redux": { time: "6 months",
-		description: `Understanding of the state management framework 
-		creating UIs for complex data models`,
+		description: `Crafted complex yet user-friendly client side rendering
+		 architectures (specifically using React and lit-html). `,
 	},
 	"GoLang": { time: "6 months",
-		description: "Backend experience with Go for business logic and database models (specifically, used the GORM framework from github)",
+		description: `Using GORM library, implemented both business and server-side 
+		logical functions such as inventory-counting and data-querying tasks. 
+		`,
 	},
 	"SQL": { time: "1 year", 
-		description: `Database modeling and querying for data-analytics 
-			projects and work related DB projects. Specific database name 
-			used was 'RoachSQL'`,
+		description: `Database modeling and querying for 
+			business-to-business application, as well as data-analytics 
+			projects on the side. Specific database name 
+			used for work: 'RoachSQL'`,
 	},
-	"HTML/CSS": { time: "4 years",
-		description: "Content for personal and professional websites",
+	"Redux": { time: "6 months",
+		description: `Within a month of first software job, unified a 
+		decentralized state management system into a fully-blown redux ecosystem.`,
 	},
 	"Unix/Systems Programming": { time: "2 years",
-		description: `Using bash on personal laptop, work computers and servers.`,
+		description: `Bash, Git, Node, npm, Docker, Kubernetes,
+		Istio, Redux, S3, and Google Cloud knowledge.`,
 	},
-	"Production Application Managment": { time: "2 years",
-		description: `Git version control, npm, ruby, 
-			webpack, grunt and docker for application management systems. Knowledge of 
-			Istio, kubernetes, and Google Cloud Platforms for production-side development`,
-	}
+	"HTML/CSS/JS": { time: "4 years",
+		description: `Resume made with browser-friendly languages only :)`,
+	},
 };
-
-
 
 // templates 
 const skills = () => {
 	let response = '<ul class="xpList">';
 	for (let i in skillsData) {
 		response += `<li class="xpItem"><div><span class="xpName">${i}</span><span class="xpTime">(${skillsData[i].time})</span></div>
-						<div class="xpDescription">${skillsData[i].description}</div></li>`
+						<div class="xpDescription"><ul><li>${skillsData[i].description}</li></ul></div></li>`
 	}
 	response += "</ul>"
 	return response;
