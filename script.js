@@ -27,7 +27,7 @@ const education = () => 'B.S. Mathematics, Physics Minor from UC Santa Barbara 2
 const skillsData = {
 	"Javascript": { time: "2.5 years",
 		description: `Crafted complex yet user-friendly client side rendering
-		 architectures (specifically using React and lit-html). `,
+		 architectures.`,
 	},
 	"GoLang": { time: "6 months",
 		description: `Using GORM library, implemented both business and server-side 
@@ -42,9 +42,9 @@ const skillsData = {
 	},
 	"Redux": { time: "6 months",
 		description: `Within a month of first software job, unified a 
-		decentralized state management system into a fully-blown redux ecosystem.`,
+		decentralized state management system into a pure redux ecosystem.`,
 	},
-	"Unix/Systems Programming": { time: "2 years",
+	"Systems Operations": { time: "2 years",
 		description: `Bash, Git, Node, npm, Docker, Kubernetes,
 		Istio, Redux, S3, and Google Cloud knowledge.`,
 	},
