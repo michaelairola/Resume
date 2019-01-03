@@ -19,7 +19,10 @@ const infoData = {
 	Address: '425 Purisima Ave, 94086 Sunnyvale CA'
 }
 const professionalSummary = () => 
-`<b>Full-stack Engineer</b> <br>
+`<b>Full-stack Engineer at <a href="https://defie.co/">Defie.co</a> (July - present) </b>
+<br><br>
+Cloud-Based Business Management Software. Specific 
+focus on customer, engineering and accounting Management tools.
 Current stack: FE - Javascript, BE - GoLang, DB - SQL`
 ;
 const workHistory = () => 'Software developer for FQ Systems';
@@ -27,7 +30,7 @@ const education = () => 'B.S. Mathematics, Physics Minor from UC Santa Barbara 2
 const skillsData = {
 	"Javascript": { time: "2.5 years",
 		description: `Crafted complex yet user-friendly client side rendering
-		 architectures.`,
+		 architectures for business related`,
 	},
 	"GoLang": { time: "6 months",
 		description: `Using GORM library, implemented both business and server-side 
