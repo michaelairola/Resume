@@ -13,10 +13,10 @@ const renderByClass = template => {
 
 // DATA CONFIGURATION FOR TEMPLATE
 const infoData = {
-	Name: "Michael Airola",
-	Email: 'mik3airol@gmail.com',
-	Cell: '(831) 210-9163',
-	Address: '425 Purisima Ave, 94086 Sunnyvale CA'
+	Name: "First Last (Name)",
+	Email: 'Email@Email.Email',
+	Cell: '(123) 456-7890',
+	Address: 'Address goes here!'
 }
 const professionalSummary = () => 
 `<b>Full stack engineer currently working at <a href="https://defie.co/">Defie.co</a></b>
