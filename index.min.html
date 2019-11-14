@@ -19,48 +19,46 @@ const infoData = {
 	Address: '425 Purisima Ave, 94086 Sunnyvale CA'
 }
 const professionalSummary = () => 
-`<b>Full-stack Engineer at <a href="https://defie.co/">Defie.co</a> (July - present) </b>
+`<b>Full stack engineer at <a href="https://defie.co/">Defie.co</a> (July 2018 - present) </b>
 <br><br>
-Cloud-Based Business Management Software. Specific 
+Cloud-Based Business Management Software Company. Specific 
 focus on customer, engineering and accounting Management tools.
 Current stack: FE - Javascript, BE - GoLang, DB - SQL`
 ;
-const workHistory = () => 'Software developer for FQ Systems';
+const workHistory = () => 'Full Stack software developer for FQ Systems';
 const education = () => 'B.S. Mathematics, Physics Minor from UC Santa Barbara 2016';
 const skillsData = {
-	"Javascript": { time: "2.5 years",
-		description: `Crafted complex yet user-friendly client side rendering
-		 architectures for business related`,
+	"Component-Based Development": { 
+		description: `Increased productivity of work flow 
+		by implementing a reusable component-based system, along with the Redux
+		state management framework for state and property values.
+		`
 	},
-	"GoLang": { time: "6 months",
-		description: `Using GORM library, implemented both business and server-side 
-		logical functions such as inventory-counting and data-querying tasks. 
+	"Deployment Operations": {
+		description: `Led team in refactoring the deployment pipeline, both
+		for local use with docker, as well as on the cloud with Kubernetes.`,
+	},
+	"Database Modeling": {
+		description: `By communicating with CEO, crafted clean and precise
+		database models for many different business management solutions as well as 
+		software specific engineering models.
 		`,
 	},
-	"SQL": { time: "1 year", 
-		description: `Database modeling and querying for 
-			business-to-business application, as well as data-analytics 
-			projects on the side. Specific database name 
-			used for work: 'RoachSQL'`,
-	},
-	"Redux": { time: "6 months",
-		description: `Within a month of first software job, unified a 
-		decentralized state management system into a pure redux ecosystem.`,
-	},
-	"Systems Operations": { time: "2 years",
-		description: `Bash, Git, Node, npm, Docker, Kubernetes,
-		Istio, Redux, S3, and Google Cloud knowledge.`,
-	},
-	"HTML/CSS/JS": { time: "4 years",
-		description: `Resume made with browser-friendly languages only :)`,
-	},
+	"Languages currently experienced in:": {
+		description: `Javascript, GoLang, SQL, Bash, Python, Ruby, and Rust.`
+	}, 
+	"Frameworks/Tools in current work stack:": {
+		description:		
+		`Docker, kubectl (kubernetes), git, Redux, LitElement/HtmlElement, 
+		polymer web-components and npm.`
+	}
 };
 
 // templates 
 const skills = () => {
 	let response = '<ul class="xpList">';
 	for (let i in skillsData) {
-		response += `<li class="xpItem"><div><span class="xpName">${i}</span><span class="xpTime">(${skillsData[i].time})</span></div>
+		response += `<li class="xpItem"><div><span class="xpName">${i}</span><span class="xpTime">${skillsData[i].time || ''}</span></div>
 						<div class="xpDescription"><ul><li>${skillsData[i].description}</li></ul></div></li>`
 	}
 	response += "</ul>"
