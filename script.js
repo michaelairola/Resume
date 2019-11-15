@@ -13,34 +13,32 @@ const renderByClass = template => {
 
 // DATA CONFIGURATION FOR TEMPLATE
 const infoData = {
-	Name: "First Last (Name)",
-	Email: 'Email@Email.Email',
-	Cell: '(123) 456-7890',
-	Address: 'Address goes here!'
+	Name: "Michael Airola",
+	Email: 'mik3airola@gmail.com',
+	Cell: '831-210-9163',
+	Address: '425 Purisima Avenue. Sunnyvale CA, 94086.'
 }
 const professionalSummary = () => 
-`<b>Full stack engineer currently working at <a href="https://defie.co/">Defie.co</a></b>
-<br>
-<br>`;
+`Full stack engineer currently working at <a href="https://defie.co/">Defie.co</a>. I am dedicated to writing usable, maintainable and powerful code.`;
 
 const skillsData = {
-	"Front End": { 
-		description: `Firm grasp of vanilla Javascript, node, redux state management framework, and component-based lifecycle frameworks. Current tools used are Typescript, Redux, and LitElement. Using LitElement Components, elminated 59,591 lines of code.`
+	"Front End:": { 
+		description: `Firm grasp of vanilla Javascript, node, redux state management framework, and component-based lifecycle frameworks. Current tools used are Typescript, Redux, and LitElement. Using LitElement Components, elminated 59,591 lines of code from front end App.`
 	},
-	"Back End": {
-		description: `Understanding of server terminology and concepts (HTTP protocol, APIs, CRUD applications, and authentication). Using Golang, created of CRUD Router Factory that eliminated around 28,625 lines of code.`,
+	"Back End:": {
+		description: `Understanding of server terminology and concepts (HTTP protocol, APIs, CRUD applications, and authentication). Using Golang, created of CRUD Router Factory that eliminated around 28,625 lines of code from backend microservices.`,
 	},
-	"Dev Ops": {
+	"Dev Ops:": {
 		description: `Expertise is in the Google Kubernetes Engine. Specific knowledge in: Google cloud console (gcloud), Kubernetes, Istio, Helm. Using Helm charts, simplified and speed of the deployment experience from hours to minutes.`,
 	},
-	"Database": {
+	"Database:": {
 		description: `Relational Database Management geek. Currently transitioning dialects from postgreSQL to MySql. Open to learning other DBMS's, relational or otherwise.`
 	}, 
 	// "System Admin": {
 	// 	description: `Knowledge of linux operating system and bash terminal environment. I love grep-ing and awk-ing my way through the terminal.`
 	// },
 	"Take Aways:": {
-		description: 'Over 7 months as lead engineer, total lines of code of our project went from 175,533 to 58,692 (65% decrease). I am dedicated to writing usable, maintainable and powerful code and am looking for an opportunity to do so.',
+		description: 'Over 7 months as lead engineer, total lines of code of our project went from 175,533 to 58,692 (65% decrease).',
 	}
 };
 // const accomplishments = [
