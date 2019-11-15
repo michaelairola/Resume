@@ -95,7 +95,6 @@ const setRowWidth = width => {
 }
 const removeSelectedRowClass = () => {
 	document.querySelectorAll('.row').forEach(rowDiv => {
-		console.log('rowDiv', rowDiv.classList);
 		rowDiv.classList.remove("selectedRow")})
 }
 const rowsListenToMouseOver = () => {
@@ -126,9 +125,9 @@ window.onload = function() {
 
 	// For printing the page properly
     window.onbeforeprint = () => {
-    	removeSelectedRowClass();
     	setResumeMargins("0px auto 0px auto");
     	setRowWidth("100%");
+    	removeSelectedRowClass();
     };
 	window.onafterprint = () => {
 		setResumeMargins("var(--resume-margins)");
