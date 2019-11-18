@@ -5,4 +5,3 @@ steps:
   args: ['push', 'gcr.io/resume-259007/resume']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['beta', 'run', 'deploy', 'resume', '--image', 'gcr.io/resume-259007/resume', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
-# images: ['gcr.io/resume-259007/resume']
