@@ -4,6 +4,11 @@ server {
 
     location / {
         root   /usr/share/nginx/html;
-        index  index.html index.htm;
+        index  index.html;
+
+    }
+    location /pdf {
+    	root /usr/share/nginx/html;
+    	index Resume.pdf;
     }
 }
