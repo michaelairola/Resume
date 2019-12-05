@@ -1,4 +1,8 @@
-// simple render functions 
+// simple render functions
+convertVariable = v => Array.isArray(v) ? v.join("") : v
+const html = (strings, ...keys) => {
+	return strings[0] + keys.map((key,i) => `${convertVariable(key)}${strings[i + 1]}`).join("");
+} 
 
 const renderById = template => {
 	const id = template.name;
@@ -18,46 +22,34 @@ const infoData = {
 	Cell: '831-210-9163',
 	Address: '425 Purisima Avenue. Sunnyvale CA, 94086.'
 }
+
 const professionalSummary = () => 
-`Full stack engineer currently working at <a href="https://defie.co/">Defie.co</a>. I am dedicated to writing usable, maintainable and powerful code.`;
+	`Full stack engineer currently working at <a href="https://defie.co/">Defie.co</a>.
+	 I am dedicated to writing usable, maintainable and powerful code.`;
 
 const skillsData = {
-	"Front End:": { 
-		description: `Firm grasp of vanilla Javascript, node, redux state management framework, and component-based lifecycle frameworks. Current tools used are Typescript, Redux, and LitElement. Using LitElement Components, elminated 59,591 lines of code from front end App.`
-	},
-	"Back End:": {
-		description: `Understanding of server terminology and concepts (HTTP protocol, APIs, CRUD applications, and authentication). Using Golang, created of CRUD Router Factory that eliminated around 28,625 lines of code from backend microservices.`,
-	},
-	"Dev Ops:": {
-		description: `Expertise is in the Google Kubernetes Engine. Specific knowledge in: Google cloud console (gcloud), Kubernetes, Istio, Helm. Using Helm charts, simplified and speed of the deployment experience from hours to minutes.`,
-	},
-	"Database:": {
-		description: `Relational Database Management geek. Currently transitioning dialects from postgreSQL to MySql. Open to learning other DBMS's, relational or otherwise.`
-	}, 
-	// "System Admin": {
-	// 	description: `Knowledge of linux operating system and bash terminal environment. I love grep-ing and awk-ing my way through the terminal.`
-	// },
-	"Take Aways:": {
-		description: 'Over 7 months as lead engineer, total lines of code of our project went from 175,533 to 58,692 (65% decrease).',
-	}
+	"Front End:":  			   	`Firm grasp of most javascript concepts, from plain vanilla coding to
+								 component-based lifecycle frameworks (i.e. React).`,
+	"Back End:":   			   	`Strong understanding of APIs using HTTP and HTTPS. Current Server-side
+								 languages used in production are Node and GoLang, but open to learning
+								 others.`,
+	"Development Operations:": 	`Expertise is in the Google Kubernetes Engine. Specific knowledge in:
+								 Google cloud console (gcloud), Kubernetes, Istio, Helm.`,
+	"Database:": 				`Relational Database Management geek. Currently transitioning dialects
+								 from postgreSQL to MySql. Open to learning other Data Base Management
+								 Systems, relational or otherwise.`,
+	"Acheivements:": 			`Over 6 months as lead engineer, total lines of code went from 134,036
+								 to 42732 (68.11% decrease).`,
 };
-// const accomplishments = [
-// 	'Over 7 months as lead engineer, total lines of code of our project went from 175,533 to 58,692 (65% decrease)',
-// 	'development environment',
-// 	'CRUD http router',
-// 	'component-based architecure learning',
-// 	'signin auth system',
-// ]
 
 const education = () => 'B.S. Mathematics, Physics Minor from UC Santa Barbara 2016';
 const workHistoryData = [
 	'Full Stack Engineer at <a href="https://defie.co/">Defie.co</a>. Fremont, CA. 2018-Present.',
 	'Server at BeachSide Bar and Cafe. Santa Barbara, CA. 2016-2018.',
 	'Poke Bar manager at Big Eye Raw Bar. Santa Barbara, CA. 2017-2018.',
-	'Blenders In the grass smoothie-shack. Santa Barbara, CA. 2013-2014.',
+	'Blenders In the Grass smoothie-shack. Santa Barbara, CA. 2013-2014.',
 	'Camp Counselor at Clover Sports Camp. Carmel, CA. Summers 2009-2015.',
 ]
-
 
 // templates 
 const workHistory = () => {
@@ -69,15 +61,20 @@ const workHistory = () => {
 	return response
 }
 
-const skills = () => {
-	let response = '<ul class="xpList">';
-	for (let i in skillsData) {
-		response += `<li class="xpItem"><div><span class="xpName">${i}</span><span class="xpTime">${skillsData[i].time || ''}</span></div>
-						<div class="xpDescription"><ul><li>${skillsData[i].description}</li></ul></div></li>`
-	}
-	response += "</ul>"
-	return response;
-}
+xpItem = (i) => `
+	<li class="xpItem">
+		<div>
+			<span class="xpName">${i}</span>
+		</div>
+		<div class="xpDescription">
+			<ul><li>${skillsData[i]}</li></ul>
+		</div>
+	</li>`
+const skills = () => html`
+	<ul class="xpList">
+		${Object.keys(skillsData).map(xpItem)}
+	</ul>
+`
 const info = () => `
 	<div id="name">${infoData.Name}</div>
 	<div id=""><span id="cell">${infoData.Cell}</span> | <span id="email">${infoData.Email}</span></div>
