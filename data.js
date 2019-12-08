@@ -1,43 +1,39 @@
-// DATA CONFIGURATION FOR TEMPLATE
+import { htmlObj } from '../html-template.js';
+
 export const infoData = {
 	Name: "Michael Airola",
-	Email: 'mik3airol@gmail.com',
-	Cell: '(831) 210-9163',
-	Address: '425 Purisima Ave, 94086 Sunnyvale CA'
+	Email: 'mik3airola@gmail.com',
+	Cell: '831-210-9163',
+	Address: '425 Purisima Avenue. Sunnyvale CA, 94086.'
 }
-export const professionalSummary = () => 
-`<b>Full stack engineer at <a href="https://defie.co/">Defie.co</a> (July 2018 - present) </b>
-<br><br>
-Cloud-Based Business Management Software Company. Specific 
-focus on customer, engineering and accounting Management tools.
-Current stack: FE - Javascript, BE - GoLang, DB - SQL`
-;
-export const workHistory = () => 'Full Stack software developer for FQ Systems';
-export const education = () => 'B.S. Mathematics, Physics Minor from UC Santa Barbara 2016';
-export const skillsData = {
-	"Component-Based Development": { 
-		description: `Increased productivity of work flow 
-		by implementing a reusable component-based system, along with the Redux
-		state management framework for state and property values.
-		`
-	},
-	"Deployment Operations": {
-		description: `Led team in refactoring the deployment pipeline, both
-		for local use with docker, as well as on the cloud with Kubernetes.`,
-	},
-	"Database Modeling": {
-		description: `By communicating with CEO, crafted clean and precise
-		database models for many different business management solutions as well as 
-		software specific engineering models.
-		`,
-	},
-	"Languages currently experienced in:": {
-		description: `Javascript, GoLang, SQL, Bash, Python, Ruby, and Rust.`
-	}, 
-	"Frameworks/Tools in current work stack:": {
-		description:		
-		`Docker, kubectl (kubernetes), git, Redux, LitElement/HtmlElement, 
-		polymer web-components and npm.`
-	}
-};
 
+export const professionalSummary = 
+	`Full stack engineer currently working at <a href="https://defie.co/">Defie.co</a>.
+	 I am dedicated to writing usable, maintainable and powerful code.`;
+
+export const skillsData = new htmlObj({
+	"Front End": [
+		`Firm grasp of most javascript concepts, from plain vanilla coding to component-based lifecycle frameworks (i.e. React).`
+	],
+	"Back End": [
+		`Strong understanding of APIs using HTTP and HTTPS. Current Server-side languages used in production are Node and GoLang, but open to learning others.`
+	],
+	"Development Operations": [
+		`Expertise is in the Google Kubernetes Engine. Specific knowledge in: Google cloud console (gcloud), Kubernetes, Istio, Helm.`
+	],
+	"Database": [
+		`Relational Database Management geek. Currently transitioning dialects from postgreSQL to MySql. Open to learning other Data Base Management Systems, relational or otherwise. Most recent work in schema and data  migrational systems.`
+	],				
+	"Achievements": [
+		`Over 6 months as lead engineer, total lines of code went from 134,244 to 43,460 (67.62% decrease).`,
+	],
+});
+
+export const workHistoryData = [
+	'Full Stack Engineer at <a href="https://defie.co/">Defie.co</a>. Fremont, CA. 2018-Present.',
+	'Server at BeachSide Bar and Cafe. Santa Barbara, CA. 2016-2018.',
+	'Poke Bar manager at Big Eye Raw Bar. Santa Barbara, CA. 2017-2018.',
+	'Blenders In the Grass smoothie-shack. Santa Barbara, CA. 2013-2014.',
+	'Camp Counselor at Clover Sports Camp. Carmel, CA. Summers 2009-2015.',
+]
+export const education = 'B.S. Mathematics, Physics Minor from UC Santa Barbara 2016';
