@@ -25,6 +25,7 @@ export const skillsData = new htmlObj({
 		`Relational Database Management geek. Currently transitioning dialects from postgreSQL to MySql. Open to learning other Data Base Management Systems, relational or otherwise. Most recent work in schema and data  migrational systems.`
 	],				
 	"Achievements": [
+		`Refactoring buff, from converting application to state-based component (using Redux) to implementing a minimalistic database schema migration implementation, making better is what I do best.`,
 		`Over 6 months as lead engineer, total lines of code went from 134,244 to 43,460 (67.62% decrease).`,
 	],
 });
