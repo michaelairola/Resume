@@ -26,7 +26,7 @@ export const skillsData = new htmlObj({
 	],				
 	"Achievements": [
 		`Over the past year, I have implemented many application-wide framework refactorizations that have significantly increased developer productivity and code simplicity. Finding solutions to problems is what I do best.`,
-		`Over 6 months as lead engineer, total lines of code of main work project went from 134,244 to 43,460 (67.62% decrease).`,
+		`As lead engineer, total lines of code of main work project went from 134,244 to 43,460 (67.62% decrease) within a timespan of 6 months.`,
 	],
 });
 
