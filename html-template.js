@@ -6,8 +6,12 @@ export class htmlObj extends Object {
 			this[key] = obj[key];
 		})
 	}
-	static keys = htmlObj => Object.keys(htmlObj).filter(key => key != "map")
-	map = fn => htmlObj.keys(this).map(key => fn(key, this[key]))
+	static keys(htmlObj) {
+		return Object.keys(htmlObj).filter(key => key != "map")
+	} 
+	map(fn) {
+		return htmlObj.keys(this).map(key => fn(key, this[key]))
+	} 
 }
 
 const convertVariable = v => {
