@@ -43,7 +43,7 @@ const resume = () => html`
 			<div>${infoData.Address}</div>
     	</div>
   		<div id="initials" class="largeCircleContainer">
-  			<div class="circle large-circle"><text id="initials">MA</text></div>
+  			<div class="circle large-circle"><text id="initials">MSA</text></div>
   		</div>
   	</div>
   	${rows.map(({ label, template, hideLine2 }) => html`
