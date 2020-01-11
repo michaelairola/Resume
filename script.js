@@ -28,7 +28,7 @@ const rows = [
 	},
 	{ label: "Work History", template: html`
 		<ul class="workList">
-			${workHistoryData}
+			${workHistoryData.map(x => html`<li>${x}</li>`)}
 		</ul>`
 	},
 	{ label: "Education", hideLine2: true, template: education },

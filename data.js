@@ -31,10 +31,10 @@ export const skillsData = new htmlObj({
 });
 
 export const workHistoryData = [
-	'Full Stack Engineer at <a href="https://defie.co/">Defie.co</a>. Fremont, CA. 2018-Present.',
-	'Server at BeachSide Bar and Cafe. Santa Barbara, CA. 2016-2018.',
-	'Poke Bar manager at Big Eye Raw Bar. Santa Barbara, CA. 2017-2018.',
-	'Blenders In the Grass smoothie-shack. Santa Barbara, CA. 2013-2014.',
-	'Camp Counselor at Clover Sports Camp. Carmel, CA. Summers 2009-2015.',
+	'Full Stack Engineer at <a href="https://defie.co/">Defie.co</a>. Fremont, CA. 2018-Present',
+	'Server at BeachSide Bar and Cafe. Santa Barbara, CA. 2016-2018',
+	'Poke Bar manager at Big Eye Raw Bar. Santa Barbara, CA. 2017-2018',
+	'Blenders In the Grass smoothie-shack. Santa Barbara, CA. 2013-2014',
+	'Camp Counselor at Clover Sports Camp. Carmel, CA. Summers 2009-2015',
 ]
 export const education = 'B.S. Mathematics, Physics Minor from UC Santa Barbara 2016';
