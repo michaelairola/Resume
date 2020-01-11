@@ -1,7 +1,7 @@
 import { htmlObj } from '../html-template.js';
 
 export const infoData = {
-	Name: "Michael Airola",
+	Name: "Michael S Airola",
 	Email: 'mik3airola@gmail.com',
 	Cell: '831-210-9163',
 	Address: '425 Purisima Avenue. Sunnyvale CA, 94086.'
