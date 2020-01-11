@@ -1,11 +1,11 @@
 FROM nginx:alpine
 
 COPY . /usr/share/nginx/html
-ARG VERSION
-ENV VERSION=$RANDOM
-RUN echo VERSION $VERSION
-RUN sed -i "s/script.js/script-${VERSION}.js/g" /usr/share/nginx/html/index.html
-RUN mv /usr/share/nginx/html/script.js /usr/share/nginx/html/script-${VERSION}.js
+
+RUN VERSION=$RANDOM \
+&& echo VERSION $VERSION \
+&& sed -i "s/script.js/script-${VERSION}.js/g" /usr/share/nginx/html/index.html \
+&& mv /usr/share/nginx/html/script.js /usr/share/nginx/html/script-${VERSION}.js
 
 COPY ./server.conf /etc/nginx/conf.d/server.conf
 
