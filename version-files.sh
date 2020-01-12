@@ -1,6 +1,6 @@
 #/bin/bash
 pwd
-LIST=$(echo index.html style.css script.js data.js html-template.js)
+LIST=$(echo style.css script.js data.js html-template.js)
 
 GiveFileVer () {
 	filename="${1%.*}"
@@ -9,7 +9,6 @@ GiveFileVer () {
 	FILE=$3
 	REGEX="\(${filename}\)\.\(${ext}\)"
 	sed -i "s/${REGEX}/\1-${VER}.\2/g" "./${FILE}"
-	# sed "s/${REGEX}/\1-${VER}.\2/g" $FILE
 }
 
 VER=$RANDOM
@@ -17,6 +16,7 @@ for i in $LIST; do
 	for j in $LIST; do
 		GiveFileVer $i $VER $j
 	done;
+	GiveFileVer $i $VER index.html
 done;
 for i in $LIST; do 
 	mv $i "${i%.*}-${VER}.${i##*.}"
