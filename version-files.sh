@@ -8,7 +8,8 @@ GiveFileVer () {
 	VER=$2; 
 	FILE=$3
 	REGEX="\(${filename}\)\.\(${ext}\)"
-	sed -i "s/${REGEX}/\1-${VER}.\2/g" $FILE
+	sed -i "s/${REGEX}/\1-${VER}.\2/g" "./${FILE}"
+	# sed -i "s/${REGEX}/\1-${VER}.\2/g" $FILE
 }
 
 VER=$RANDOM
