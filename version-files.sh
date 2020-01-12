@@ -1,5 +1,5 @@
 #/bin/bash
-
+pwd
 LIST=$(echo index.html style.css script.js data.js html-template.js)
 
 GiveFileVer () {
