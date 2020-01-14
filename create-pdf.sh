@@ -1,6 +1,6 @@
 #/!/bin/bash
 echo "creating pdf..."
-echo $URL
+echo "URL:" $URL
 sleep 5;
 curl --compressed https://service.prerender.cloud/pdf/https://${URL} > index.pdf
 echo "pdf created:"
