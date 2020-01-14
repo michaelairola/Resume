@@ -7,5 +7,5 @@ RUN . ./version-files.sh
 
 COPY ./server.conf /etc/nginx/conf.d/server.conf
 
-ENTRYPOINT [ "/bin/bash", "create-pdf.sh" ]
+ENTRYPOINT [ "create-pdf.sh" ]
 EXPOSE 8080
