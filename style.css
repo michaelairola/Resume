@@ -69,6 +69,9 @@
 @media print {
 	#resume {
 		margin: 0px auto 0px auto;
+		box-shadow: none;
+		border: none;
+		width: 100%;
 	}
 	.row {
 		width: 100%;
