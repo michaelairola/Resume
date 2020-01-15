@@ -1,9 +1,13 @@
 FROM nginx:alpine
 
+WORKDIR /etc/nginx/conf.d/
+COPY server.conf .
+# COPY ./server.conf /etc/nginx/conf.d/server.conf
+
 WORKDIR /usr/share/nginx/html/
 COPY . .
-RUN . ./version-files.sh
 
-COPY ./server.conf /etc/nginx/conf.d/server.conf
+RUN . ./version-files.sh
+RUN . ./create-pdf.sh &
 
 EXPOSE 8080
