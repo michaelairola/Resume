@@ -5,7 +5,10 @@ COPY server.conf .
 # COPY ./server.conf /etc/nginx/conf.d/server.conf
 
 WORKDIR /usr/share/nginx/html/
-COPY . .
+COPY src/ .
+COPY icons/ .
+COPY index.html .
+COPY resume.pdf .
 
 RUN . ./version-files.sh
 
