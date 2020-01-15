@@ -58,7 +58,7 @@ const resume = () => html`
 			${hideLine2 ? `` : `<div class="line2"></div>` } 
 		</span>
   		<div class="right cell">
-  			${template}
+  			${hideLine2 ? html`<span style="font-weight:bold;">${template}</span>` : template}
   		</div>
   	</div>
   	`)}`

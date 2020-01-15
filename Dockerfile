@@ -8,6 +8,5 @@ WORKDIR /usr/share/nginx/html/
 COPY . .
 
 RUN . ./version-files.sh
-RUN . ./create-pdf.sh &
 
 EXPOSE 8080
