@@ -5,8 +5,8 @@ COPY server.conf .
 # COPY ./server.conf /etc/nginx/conf.d/server.conf
 
 WORKDIR /usr/share/nginx/html/
-COPY src/ .
-COPY icons/ .
+COPY src/ src/
+COPY icons/ icons/
 COPY index.html .
 COPY resume.pdf .
 
