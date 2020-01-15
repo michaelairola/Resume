@@ -1,4 +1,4 @@
-import { htmlObj } from '../html-template.js';
+import { htmlObj } from './html-template.js';
 
 export const linksData = new htmlObj({
 	"/resume.pdf": "pdf.svg",

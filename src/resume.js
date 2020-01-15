@@ -1,4 +1,4 @@
-import { html, htmlObj, renderById, addClassById, listenToMouseOver } from '../html-template.js';
+import { html, renderById, addClassById, listenToMouseOver } from './html-template.js';
 
 import { 
 	infoData,
@@ -67,12 +67,12 @@ const resume = () => html`
 const links = () => html`
 	<div style="display:flex;flex-direction:column;">
 		${linksData.map((href, icon) => html`
-			<a href="${href}" target="_blank"><img style="width:70px;margin-top:5px;" src="./icons/${icon}" /></a>
+			<a href="${href}" target="_blank"><img style="width:70px;margin:5px 0 0 5px;" src="./icons/${icon}" /></a>
 		`)}
 	</div>
 `
 
-const iconCred = () => html`<div class="non-print">Pdf Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>`
+const iconCred = () => html`<div class="non-print">Pdf Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a></div>`
 
 const entrypoint = () => html`
 	<div id="links"></div>
