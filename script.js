@@ -43,7 +43,7 @@ const resume = () => html`
 			<div>${infoData.Address}</div>
     	</div>
   		<div id="initials" class="largeCircleContainer">
-  			<div class="circle large-circle"><text id="initials">MSA</text></div>
+  			<div class="circle large-circle"><text id="initials">MA</text></div>
   		</div>
   	</div>
   	${rows.map(({ label, template, hideLine2 }) => html`
@@ -63,7 +63,13 @@ const resume = () => html`
   	</div>
   	`)}`
 
+const pdfLink = () => html`<a href="/index.pdf"><img style="width:100px;" src="pdf.svg" /></a>`
+
+const entrypoint = () => html`<div id="pdfLink"></div><div class="resume" id="resume"></div>`
+
 window.onload = () => {
+	renderById(entrypoint)
+	renderById(pdfLink)
 	renderById(resume)
 	listenToMouseOver("row", "selectedRow");
 }

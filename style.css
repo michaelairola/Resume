@@ -17,6 +17,11 @@
 	border: 1px solid #e8ecf0;
 }
 
+#pdfLink {
+	position: fixed;
+	bottom: 50%;
+}
+
 /* phone size */
 @media (max-device-width: 480px) {
 	html {
@@ -71,7 +76,10 @@
 		margin: 0px auto 0px auto;
 		box-shadow: none;
 		border: none;
-		width: 100%;
+		height: 100%;
+	}
+	#pdfLink {
+		display: none!IMPORTANT;
 	}
 	.row {
 		width: 100%;
