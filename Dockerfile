@@ -10,6 +10,7 @@ COPY icons/ .
 COPY index.html .
 COPY resume.pdf .
 
+COPY version-files.sh .
 RUN . ./version-files.sh
 
 EXPOSE 8080
