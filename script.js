@@ -63,13 +63,18 @@ const resume = () => html`
   	</div>
   	`)}`
 
-const pdfLink = () => html`<a href="/index.pdf"><img style="width:100px;" src="pdf.svg" /></a>`
+const pdfLink = () => html`<a href="/resume.pdf"><img style="width:100px;" src="pdf.svg" /></a>`
+const pdfPicCred = () => html`<div class="non-print">Pdf Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>`
 
-const entrypoint = () => html`<div id="pdfLink"></div><div class="resume" id="resume"></div>`
+const entrypoint = () => html`
+	<div id="pdfLink"></div>
+	<div class="resume" id="resume"></div>
+	<div id="pdfPicCred"></div>`
 
 window.onload = () => {
 	renderById(entrypoint)
 	renderById(pdfLink)
 	renderById(resume)
+	renderById(pdfPicCred)
 	listenToMouseOver("row", "selectedRow");
 }

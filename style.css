@@ -9,7 +9,7 @@
 }
 
 /*8.27in x 11.69in*/
-.resume {
+#resume {
 	width: var(--resume-width);
 	height: var(--resume-height);
 	margin: var(--resume-margins);
@@ -28,7 +28,7 @@
 		width: 100%;
 		height: 100%;
 	}
-	.resume {
+	#resume {
 		width: 100%;
 		height: 100%;
 		margin: 0px;
@@ -79,6 +79,9 @@
 		height: 100%;
 	}
 	#pdfLink {
+		display: none!IMPORTANT;
+	}
+	#pdfPicCred {
 		display: none!IMPORTANT;
 	}
 	.row {
