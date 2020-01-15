@@ -1,6 +1,4 @@
 #/bin/bash
-pwd
-# LIST=$(echo style.css script.js data.js html-template.js)
 LIST=$(ls src)
 
 GiveFileVer () {
@@ -13,13 +11,13 @@ GiveFileVer () {
 }
 
 VER=$RANDOM
-for i in $LIST; do
-	for j in $LIST; do(
-		cd src/
+for i in $LIST; do(
+	cd src/
+	for j in $LIST; do
 		GiveFileVer ${i} $VER $j
-	); done;
-	GiveFileVer src/$i $VER index.html
-done;
+	done;
+	GiveFileVer ${i} $VER ..\/index.html
+); done;
 for i in $LIST; do 
 	mv src/$i src/"${i%.*}-${VER}.${i##*.}"
 done;
