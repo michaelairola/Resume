@@ -33,7 +33,10 @@ export const renderById = template => {
 	const id = template.name;
 	document.getElementById(id).innerHTML = template()
 }
-
+export const addClassById = (template, className) => {
+	const id = template.name;
+	document.getElementById(id).classList.add(className)
+}
 export const listenToMouseOver = (className, addedClassName) => {
 	document.querySelectorAll(`.${className}`).forEach(node => {
 		node.addEventListener('mouseover', _ => {

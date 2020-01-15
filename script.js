@@ -1,11 +1,12 @@
-import { html, htmlObj, renderById, listenToMouseOver } from '../html-template.js';
+import { html, htmlObj, renderById, addClassById, listenToMouseOver } from '../html-template.js';
 
 import { 
 	infoData,
 	professionalSummary, 
 	skillsData, 
 	education, 
-	workHistoryData 
+	workHistoryData,
+	linksData
 } from'./data.js';
 
 const rows = [
@@ -63,18 +64,30 @@ const resume = () => html`
   	</div>
   	`)}`
 
-const pdfLink = () => html`<a href="/resume.pdf"><img style="width:100px;" src="pdf.svg" /></a>`
-const pdfPicCred = () => html`<div class="non-print">Pdf Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>`
+const links = () => html`
+	<div style="display:flex;flex-direction:column;">
+		${linksData.map((href, icon) => html`
+			<a href="${href}" target="_blank"><img style="width:70px;margin-top:5px;" src="./icons/${icon}" /></a>
+		`)}
+	</div>
+`
+
+const iconCred = () => html`<div class="non-print">Pdf Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>`
 
 const entrypoint = () => html`
-	<div id="pdfLink"></div>
+	<div id="links"></div>
 	<div class="resume" id="resume"></div>
-	<div id="pdfPicCred"></div>`
+	<div id="iconCred"></div>
+`
 
 window.onload = () => {
 	renderById(entrypoint)
-	renderById(pdfLink)
+	renderById(links)
 	renderById(resume)
-	renderById(pdfPicCred)
+	renderById(iconCred)
+	setTimeout(() => {
+		addClassById(links, "slide-in")
+		addClassById(iconCred, "fade-in")
+	}, 2000)
 	listenToMouseOver("row", "selectedRow");
 }
