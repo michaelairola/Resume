@@ -29,6 +29,7 @@
 }
 #iconCred {
 	opacity: 0;
+	text-align: center;
 
 	transition: opacity 2s ease-in-out;
 	-moz-transition: opacity 2s ease-in-out;
