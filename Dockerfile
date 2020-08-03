@@ -6,6 +6,8 @@ COPY server.conf .
 WORKDIR /usr/share/nginx/html/
 COPY src/ ./src/
 COPY icons/ ./icons/
+COPY OneSignalSDKUpdaterWorker.js .
+COPY OneSignalSDKWorker.js .
 COPY index.html .
 COPY resume.pdf .
 
