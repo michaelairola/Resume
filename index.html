@@ -5,6 +5,17 @@
     <title>Michael's Resume</title>
     <link rel="stylesheet" href="src/style.css" />
     <script async src="https://arc.io/widget.js#XRs5uwCQwU3oDhs6JeLyH8"></script>
+    <script src="OneSignalSdk/Worker.js" async=""></script>
+    <script src="OneSignalSdk/Update.js" async=""></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+	  window.OneSignal = window.OneSignal || [];
+	  OneSignal.push(function() {
+	    OneSignal.init({
+	      appId: "b5bb4765-e1b6-4c32-a33a-36ffe14296fe",
+	    });
+	  });
+	</script>
   </head>
   <body id="entrypoint"></body>
   <script type="module" src="src/resume.js"></script>
