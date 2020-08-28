@@ -15,8 +15,7 @@ export const infoData = {
 }
 
 export const professionalSummary = 
-	`Full stack engineer currently working at <a href="https://defie.co/">Defie.co</a>.
-	 I am dedicated to writing usable, maintainable and powerful code.`;
+	`Full stack engineer dedicated to writing usable, maintainable and powerful code. Last employed at <a href="https://defie.co/">Defie.co</a>`;
 
 export const skillsData = new htmlObj({
 	"Front End": [
@@ -38,7 +37,7 @@ export const skillsData = new htmlObj({
 });
 
 export const workHistoryData = [
-	'Full Stack Engineer at <a href="https://defie.co/">Defie.co</a>. Fremont, CA. 2018-Present',
+	'Full Stack Engineer at <a href="https://defie.co/">Defie.co</a>. Fremont, CA. 2018-2020',
 	'Server at BeachSide Bar and Cafe. Santa Barbara, CA. 2016-2018',
 	'Poke Bar manager at Big Eye Raw Bar. Santa Barbara, CA. 2017-2018',
 	'Blenders In the Grass smoothie-shack. Santa Barbara, CA. 2013-2014',
