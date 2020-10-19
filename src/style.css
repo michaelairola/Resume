@@ -20,7 +20,7 @@
 #links {
 	position: fixed;
 	z-index: 1;
-	top: 30%;
+	top: 20%;
 
 	left: -10%;
 	transition: left 1s linear;
@@ -34,6 +34,10 @@
 	transition: opacity 2s ease-in-out;
 	-moz-transition: opacity 2s ease-in-out;
 	-webkit-transition: opacity 2s ease-in-out;
+}
+.icon {
+	position: relative;
+	z-index: 100;
 }
 
 .slide-in {
@@ -80,14 +84,12 @@
 		border-left: solid 1px transparent;
 		box-shadow: 0 0 10px rgba(88,88,95,0.12);
 		background-color: white;
-		z-index: 100;
 	}
 	.selectedRow .outside-box {
 		border: solid 1px #e8ecf0;
 		border-right: solid 0px transparent;
 		box-shadow: 0 0 10px rgba(88, 88, 95, 0.12);
 		background-color: #fcfcfc;
-		z-index: 100;
 	}
 	.row {
 		width: 110%;

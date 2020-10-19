@@ -67,7 +67,7 @@ const resume = () => html`
 const links = () => html`
 	<div style="display:flex;flex-direction:column;">
 		${linksData.map((href, icon) => html`
-			<a href="${href}" target="_blank"><img style="width:70px;margin:5px 0 0 5px;" src="./icons/${icon}" /></a>
+			<a href="${href}" target="_blank"><img class="icon" style="width:70px;margin:5px 0 0 5px;" src="./icons/${icon}" /></a>
 		`)}
 	</div>
 `
