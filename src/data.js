@@ -1,10 +1,11 @@
 import { htmlObj } from './html-template.js';
 
 export const linksData = new htmlObj({
-	"/resume.pdf": "pdf.svg",
+	"https://blog.michaelairola.com": "blogging.svg",
 	"https://github.com/michaelairola": "github.svg",
 	"https://twitter.com/": "twitter.svg",
 	"https://www.linkedin.com/in/michael-airola-122702162/": "linkedin.svg",
+	"/resume.pdf": "pdf.svg",
 })
 
 export const infoData = {
