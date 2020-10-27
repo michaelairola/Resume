@@ -5,7 +5,7 @@ export const linksData = new htmlObj({
 	"https://github.com/michaelairola": "github.svg",
 	"https://twitter.com/": "twitter.svg",
 	"https://www.linkedin.com/in/michael-airola-122702162/": "linkedin.svg",
-	"/resume.pdf": "pdf.svg",
+	"/software-engineer.pdf": "pdf.svg",
 })
 
 export const infoData = {
