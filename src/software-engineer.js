@@ -10,7 +10,7 @@ export const linksData = new htmlObj({
 
 export const infoData = {
 	Name: "Michael S Airola",
-	Email: 'mik3airola@gmail.com',
+	Email: 'me@michaelairola.com',
 	Cell: '831-210-9163',
 	Address: '645 Harrison Terrace. San Jose, CA 95125.'
 }

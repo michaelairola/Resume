@@ -7,7 +7,7 @@ import {
 	education, 
 	workHistoryData,
 	linksData
-} from'./data.js';
+} from './waiter.js';
 
 const rows = [
 	{ label: "Professional Summary", template: html`
