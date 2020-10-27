@@ -7,7 +7,7 @@ WORKDIR /usr/share/nginx/html/
 COPY src/ ./src/
 COPY icons/ ./icons/
 COPY index.html .
-COPY resume.pdf .
+COPY *.pdf .
 
 COPY version-files.sh .
 RUN . ./version-files.sh
