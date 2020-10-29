@@ -1,16 +1,9 @@
-FROM nginx:alpine
 
-WORKDIR /etc/nginx/conf.d/
-COPY server.conf .
+FROM node:latest 
 
-WORKDIR /usr/share/nginx/html/
-COPY src/ ./src/
-COPY icons/ ./icons/
-COPY index.html .
-COPY waiter.pdf .
-COPY software-engineer.pdf .
+COPY . .
+RUN npm i
 
-COPY version-files.sh .
-RUN . ./version-files.sh
+CMD [ "npm", "start"];
 
 EXPOSE 8080
