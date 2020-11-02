@@ -15,8 +15,9 @@ staticDirs.forEach(key =>
 )
 
 const routeVariations = {
-	"/": "waiter", 
+	"/": "software-engineer",
 	"/software": "software-engineer", 
+	"/waiter": "waiter",
 }
 Object.keys(routeVariations).forEach(key => 
 	app.get(key, (_, res) => 
