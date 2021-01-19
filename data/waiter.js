@@ -12,7 +12,7 @@ export const infoData = {
 	Name: "Michael S Airola",
 	Email: 'me@michaelairola.com',
 	Cell: '831-210-9163',
-	Address: '645 Harrison Terrace. San Jose, CA 95125.'
+	Address: '121 S Voluntario st. Santa Barbrara, CA 93103'
 }
 
 export const professionalSummary = 
