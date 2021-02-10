@@ -16,7 +16,7 @@ export const infoData = {
 }
 
 export const professionalSummary = 
-	`Full stack engineer dedicated to writing usable, maintainable and powerful code. Last employed at <a href="https://defie.co/">Defie.co</a>`;
+	`Full stack engineer dedicated to writing usable, maintainable and powerful code. Current position is Business Intelligence Developer at <a href="https://www.aspirehealthplan.org/">Aspire Health</a>.`;
 
 export const skillsData = new htmlObj({
 	"Front End": [
@@ -32,12 +32,12 @@ export const skillsData = new htmlObj({
 		`Relational Database Management geek. Currently transitioning dialects from postgreSQL to MySql. Open to learning other Data Base Management Systems, relational or otherwise. Most recent work in schema and data  migrational systems. 2 years professional experience.`
 	],				
 	"Achievements": [
-		`Over the past 2 years, I have implemented many application-wide framework refactorizations that have significantly increased developer productivity and code simplicity. Finding solutions to problems is what I do best.`,
-		`As lead engineer, total lines of code of main work project went from 134,244 to 43,460 (67.62% decrease) within a timespan of 6 months.`,
+		`As lead engineer at Defie, total lines of code of main work project went from 134,244 to 43,460 (67.62% decrease) within a timespan of 6 months.`,
 	],
 });
 
 export const workHistoryData = [
+	'BI Dev at <a href="https://www.aspirehealthplan.org/">Aspire</a>. Monterey, CA. 2021-present',
 	'Full Stack Engineer at <a href="https://defie.co/">Defie.co</a>. Fremont, CA. 2018-2020',
 	'Server at BeachSide Bar and Cafe. Santa Barbara, CA. 2016-2018',
 	'Poke Bar manager at Big Eye Raw Bar. Santa Barbara, CA. 2017-2018',

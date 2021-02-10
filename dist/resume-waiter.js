@@ -1,6 +1,6 @@
 import { html, renderById, addClassById, listenToMouseOver } from './html-template.js';
 
-import { infoData, professionalSummary, skillsData, education, workHistoryData,linksData } from './waiter.js';
+import { infoData, professionalSummary, skillsData, education, workHistoryData, linksData } from './waiter.js';
 
 const rows = [
 	{ label: "Professional Summary", template: html`

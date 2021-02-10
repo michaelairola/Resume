@@ -1,6 +1,6 @@
 import { html, renderById, addClassById, listenToMouseOver } from './html-template.js';
 
-import { infoData, professionalSummary, skillsData, education, workHistoryData,linksData } from './{{ toggle }}.js';
+import { infoData, professionalSummary, skillsData, education, workHistoryData, linksData } from './{{ toggle }}.js';
 
 const rows = [
 	{ label: "Professional Summary", template: html`

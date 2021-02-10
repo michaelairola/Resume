@@ -15,8 +15,8 @@ export const infoData = {
 	Address: '121 S Voluntario st. Santa Barbrara, CA 93103'
 }
 
-export const professionalSummary = 
-	`Technologically experienced engineer searching for data-driven businesses and environments. Current position is Business Intelligence Developer at <a href="https://www.aspirehealthplan.org/">Aspire Health</a>.`;
+export const professionalSummary =
+	`Business Intelligence Developer at <a href="https://www.aspirehealthplan.org/">Aspire Health</a>. I develop useful tools for analyzing healthcare data.`;
 
 export const skillsData = new htmlObj({
 	"Front End": [

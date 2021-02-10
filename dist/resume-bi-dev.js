@@ -1,6 +1,6 @@
 import { html, renderById, addClassById, listenToMouseOver } from './html-template.js';
 
-import { infoData, professionalSummary, skillsData, education, workHistoryData, linksData } from './software-engineer.js';
+import { infoData, professionalSummary, skillsData, education, workHistoryData, linksData } from './bi-dev.js';
 
 const rows = [
 	{ label: "Professional Summary", template: html`
