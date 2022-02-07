@@ -20,20 +20,20 @@ export const professionalSummary =
 
 export const skillsData = new htmlObj({
 	"Front End": [
-		`Firm grasp of most javascript concepts, from plain vanilla coding to component-based lifecycle frameworks (i.e. React). 2 years professional experience.`
+		`I know Javascript! 2 years professional experience with component based life cycle fremeworks (i.e. lit-element, but this falls in the same set of frameworks as React does). 4 years recreational experience with Node, Vanilla JS, React, ReactNative, Vue, and most other buzz-word frameworks!`
 	],
 	"Back End": [
-		`Strong understanding of APIs using HTTP and HTTPS. Current Server-side languages used in production are Node and GoLang, but open to learning others. 2 years professional experience.`
+		`Current professional experience (2 years) in backend systems have used Node and GoLang, but love playing around with anything from rust to rails.`
 	],
 	"Development Operations": [
-		`Expertise is in the Google Kubernetes Engine. Specific knowledge in: Google cloud console (gcloud), Kubernetes, Istio, Helm. 2 years professional experience.`
+		`A good CI/CD can go a long way! When 'git push master' triggers the testing and deployment processes I desire, life is good.`
 	],
 	"Database": [
-		`Relational Database Management geek. Currently transitioning dialects from postgreSQL to MySql. Open to learning other Data Base Management Systems, relational or otherwise. Most recent work in schema and data  migrational systems. 2 years professional experience.`
+		`Query Languages are fun! I prefer structure (I have ~ 3.5 years experience with SQL variants: mysql and tsql to be exact).`
 	],				
-	"Achievements": [
-		`As lead engineer at Defie, total lines of code of main work project went from 134,244 to 43,460 (67.62% decrease) within a timespan of 6 months.`,
-	],
+	// "Achievements": [
+	// 	`As lead engineer at Defie, total lines of code of main work project went from 134,244 to 43,460 (67.62% decrease) within a timespan of 6 months.`,
+	// ],
 });
 
 export const workHistoryData = [
