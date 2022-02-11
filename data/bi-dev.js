@@ -20,7 +20,7 @@ export const professionalSummary =
 
 export const skillsData = new htmlObj({
 	"Front End": [
-		`Firm grasp of most javascript concepts, from plain vanilla coding to component-based lifecycle frameworks (i.e. React). 2 years professional experience.`
+		`I know Javascript! 2 years professional experience with component based life cycle fremeworks (i.e. lit-element, but this falls in the same set of frameworks as React does).`
 	],
 	"Back End": [
 		`Strong understanding of APIs using HTTP and HTTPS. Current Server-side languages used in production are Node and GoLang, but open to learning others. 2 years professional experience.`
