@@ -65,22 +65,22 @@ const links = () => html`
 	</div>
 `
 
-const iconCred = () => html`<div class="non-print">Pdf Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a></div>`
+// const iconCred = () => html`<div class="non-print">Pdf Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a></div>`
 
 const entrypoint = () => html`
 	<div id="links"></div>
 	<div class="resume" id="resume"></div>
-	<div id="iconCred"></div>
 `
+	// <div id="iconCred"></div>
 
 window.onload = () => {
 	renderById(entrypoint)
 	renderById(links)
 	renderById(resume)
-	renderById(iconCred)
+	// renderById(iconCred)
 	setTimeout(() => {
 		addClassById(links, "slide-in")
-		addClassById(iconCred, "fade-in")
+		// addClassById(iconCred, "fade-in")
 	}, 2000)
 	listenToMouseOver("row", "selectedRow");
 }
