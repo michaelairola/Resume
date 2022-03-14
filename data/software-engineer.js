@@ -19,18 +19,18 @@ export const professionalSummary =
 	`Full stack engineer dedicated to writing usable, maintainable and powerful code. Current position is Business Intelligence Developer at <a href="https://www.aspirehealthplan.org/">Aspire Health</a>.`;
 
 export const skillsData = new htmlObj({
+	"Database": [
+		`4 years experience in SQL (mostly in mysql & transact-sql variants).`
+	],				
 	"Front End": [
-		`I know Javascript! 2 years professional experience with component based life cycle fremeworks (i.e. lit-element, but this falls in the same set of frameworks as React does). 4 years recreational experience with Node, Vanilla JS, React, ReactNative, Vue, and most other buzz-word frameworks!`
+		`2 years professional experience with component based life cycle fremeworks (i.e. lit-element, but this falls in the same set of frameworks as React does). 4 years recreational experience with Node, Vanilla JS, React, ReactNative, and Vue.`
 	],
 	"Back End": [
 		`Current professional experience (2 years) in backend systems have used Node and GoLang, but love playing around with anything from rust to rails.`
 	],
 	"Development Operations": [
-		`A good CI/CD can go a long way! When 'git push master' triggers the testing and deployment processes I desire, life is good.`
+		`2 years professional `
 	],
-	"Database": [
-		`Query Languages are fun! I prefer structure (I have ~ 3.5 years experience with SQL variants: mysql and tsql to be exact).`
-	],				
 	// "Achievements": [
 	// 	`As lead engineer at Defie, total lines of code of main work project went from 134,244 to 43,460 (67.62% decrease) within a timespan of 6 months.`,
 	// ],

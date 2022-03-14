@@ -16,7 +16,7 @@ export const infoData = {
 }
 
 export const professionalSummary = 
-	`Technologically experienced engineer searching for data-driven businesses and environments. Current position is Business Intelligence Developer at <a href="https://www.aspirehealthplan.org/">Aspire Health</a>.`;
+	`Tech xp engin search data. Current position is Business Intelligence Developer at <a href="https://www.aspirehealthplan.org/">Aspire Health</a>.`;
 
 export const skillsData = new htmlObj({
 	"Front End": [
