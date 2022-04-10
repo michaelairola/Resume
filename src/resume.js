@@ -1,6 +1,13 @@
 import { html, renderById, addClassById, listenToMouseOver } from './html-template.js';
 
-import { infoData, professionalSummary, skillsData, education, workHistoryData, linksData } from './{{ toggle }}.js';
+import { 
+	  infoData
+	, professionalSummary
+	, education
+	, workXps
+	, skills
+	, linksData 
+} from './{{ toggle }}.js';
 
 
 const rows = [
@@ -9,23 +16,29 @@ const rows = [
 			${professionalSummary}
 		</div>`
 	},
-	{ label: "Skills", template: html`
+	{ label: "Work Experience", template: html`
 		<ul class="xpList">
-		${skillsData.map((key, vals) => html`
+		${workXps.map(workXp => html`
 			<li class="xpItem">
-				<div class="xpName">${key}:</div>
+				<div>
+					<span class="xpName">
+					${workXp.Name} at <a target="_blank" href="${workXp.Link}">${workXp.Location}</a> 
+					</span>
+					(${workXp.Time}):
+				</div>
 				<div class="xpDescription">
-					<ul>${vals.map(v => html`<li>${v}</li>`)}</ul>
+					<ul>${workXp.Bullets.map(v => html`<li>${v}</li>`)}</ul>
 				</div>
 			</li>`
 		)}
 		</ul>`
 	},
-	{ label: "Work History", template: html`
+	{ label: "Other notables", template: html`
 		<ul class="workList">
-			${workHistoryData.map(x => html`<li>${x}</li>`)}
+			${skills.map(x => html`<li>${x}</li>`)}
 		</ul>`
 	},
+	
 	{ label: "Education", hideLine2: true, template: education },
 ]
 

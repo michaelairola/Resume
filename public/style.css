@@ -1,5 +1,6 @@
 
 :root {
+/*8.27in x 11.69in*/
 	--resume-width: 800px;
 	--resume-height: 1130px;
 
@@ -8,7 +9,6 @@
 	--resume-margins: 100px auto 100px auto;
 }
 
-/*8.27in x 11.69in*/
 #resume {
 	width: var(--resume-width);
 	height: var(--resume-height);
@@ -214,6 +214,7 @@
 	font-size: 20px;
 	color: rgb(1, 135, 222);
 }
+
 .xpTime {
 	margin: 10px;
 }
@@ -260,3 +261,10 @@
 .debug {
 	border: solid 2px red;
 }
+
+/*  */
+a {
+	color: inherit;
+	text-decoration:  none;
+}
+
