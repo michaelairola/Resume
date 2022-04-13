@@ -33,7 +33,7 @@ const rows = [
 		)}
 		</ul>`
 	},
-	{ label: "Other notables", template: html`
+	{ label: "Tools in the Toolbox", template: html`
 		<ul class="workList">
 			${skills.map(x => html`<li>${x}</li>`)}
 		</ul>`

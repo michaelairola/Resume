@@ -1,11 +1,11 @@
 import { htmlObj } from './html-template.js';
 
 export const linksData = new htmlObj({
-	"https://blog.michaelairola.com": "blogging.svg",
-	"https://github.com/michaelairola": "github.svg",
-	"https://twitter.com/": "twitter.svg",
 	"https://www.linkedin.com/in/michael-airola-122702162/": "linkedin.svg",
-	"/pdf/software-engineer.pdf": "pdf.svg",
+	"https://github.com/michaelairola": "github.svg",
+	// "https://twitter.com/": "twitter.svg",
+	"/pdf/resume.pdf": "pdf.svg",
+	"https://blog.michaelairola.com": "blogging.svg",
 	"https://www.cookbook.michaelairola.com/": "cookbook.svg",
 })
 
@@ -17,7 +17,8 @@ export const infoData = {
 }
 
 export const professionalSummary = 
-	`Looking for positions where I can develop useful products for important causes in a healthy work environment. I love making complex things less complex. Current position is Business Intelligence Developer at <a href="https://www.aspirehealthplan.org/">Aspire Health Plan</a>.`;
+	`Looking for positions where I can develop useful products for important causes in a healthy work environment. I love making complex things less complex.`
+	// Current position is Business Intelligence Developer at <a href="https://www.aspirehealthplan.org/">Aspire Health Plan</a>.`;
 
 export const workXps = [
 	{
@@ -26,9 +27,9 @@ export const workXps = [
 		Link: "https://www.aspirehealthplan.org/", 
 		Time: "2021-present", 
 		Bullets: [
-			`Developed, prepped, and maintained Aspire's <a target="_blank" href="https://www.precisely.com/glossary/enterprise-data-warehouse#:~:text=An%20enterprise%20data%20warehouse%20(EDW,server%20or%20in%20the%20cloud.">Enterprise Data Warehouse</a> for all of Aspire's business needs.`,
+			`Developed, prepped, and maintained Aspire's <a target="_blank" href="https://www.precisely.com/glossary/enterprise-data-warehouse#:~:text=An%20enterprise%20data%20warehouse%20(EDW,server%20or%20in%20the%20cloud.">Enterprise Data Warehouse</a> (SQL database) for all of Aspire's business needs.`,
 			"Gathered requirements for and implemented logic for client-requested data reports.", 
-			"Designed, implemented, and operated a data-extraction pipeline runner - complete with monitoring, validating, and scheduling features. Used for all data file exchanges going to Aspire's business partners.",
+			"Designed, implemented, and operated a data-extraction pipeline runner - complete with monitoring, validating, and scheduling features (operations/file system program written in C++). Used for all data file exchanges going to Aspire's business partners.",
 			"Designed, implemented, and operated a data load monitoring suite. Used for all data file loads coming from Aspire's business partners."
 		]
 	},{
