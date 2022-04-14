@@ -10,7 +10,7 @@ export const linksData = new htmlObj({
 })
 
 export const infoData = {
-	Name: "Michael S Airola",
+	Name: "Michael Airola",
 	Email: 'me@michaelairola.com',
 	Cell: '831-210-9163',
 	Address: '119 S Voluntario St. Santa Barbrara, CA 93103'
