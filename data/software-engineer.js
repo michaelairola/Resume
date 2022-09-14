@@ -52,7 +52,7 @@ export const skills = [
 	,`Server-side engineering: GoLang, Node ~ 2 yrs xp.`
 	,`Development Operations: Linux, Git, Docker ~ 4yrs xp.`
 	,`Cloud development engineering: Docker Container/Kubernetes ~ 2 yrs xp. AWS S3 ~ 2 yrs xp.`
-	,`CI/CD pipeline engineering: Gitlab Jenkins pipelines, Google Cloud triggers, ect }~ 2 yrs xp. `
+	,`CI/CD pipeline engineering: Gitlab Jenkins pipelines, Google Cloud triggers, ect. ~ 2 yrs xp. `
 ]
 
 export const education = 'B.S. Mathematics, Physics Minor from UC Santa Barbara 2016';
