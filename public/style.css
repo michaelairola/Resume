@@ -127,7 +127,7 @@
 }
 .row {
 	position: relative;
-	right: 3px;
+	right: 30px;
 	margin-top: var(--margin-top);
 	padding-top: var(--padding-top);
 	padding-bottom: 20px;

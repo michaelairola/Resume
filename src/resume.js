@@ -5,6 +5,7 @@ import {
 	, professionalSummary
 	, education
 	, workXps
+	, tools
 	, skills
 	, linksData 
 } from './{{ toggle }}.js';
@@ -16,7 +17,7 @@ const rows = [
 			${professionalSummary}
 		</div>`
 	},
-	{ label: "Work Experience", template: html`
+	{ label: "Work", template: html`
 		<ul class="xpList">
 		${workXps.map(workXp => html`
 			<li class="xpItem">
@@ -33,12 +34,14 @@ const rows = [
 		)}
 		</ul>`
 	},
-	{ label: "Tools in the Toolbox", template: html`
-		<ul class="workList">
-			${skills.map(x => html`<li>${x}</li>`)}
-		</ul>`
+	{ label: "Stacks", template: html`
+		<span>
+			${Object.keys(skills).map(skill => `<b>${skill}</b>: ${skills[skill]}`).join(", ")}
+		</span>`
 	},
-	
+	{ label: "Buzzwords", template: html`
+		<span>${Object.keys(tools).map(tool => `<b>${tool}</b>: ${tools[tool]}`).join(", ")}</span>
+	`},
 	{ label: "Education", hideLine2: true, template: education },
 ]
 
@@ -48,7 +51,6 @@ const resume = () => html`
     	<div id="info" class="right">
 			<div id="name">${infoData.Name}</div>
 			<div><span>${infoData.Cell}</span> | <span>${infoData.Email}</span></div>
-			<div>${infoData.Address}</div>
     	</div>
   		<div id="initials" class="largeCircleContainer">
   			<div class="circle large-circle"><text id="initials">MA</text></div>

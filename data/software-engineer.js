@@ -13,24 +13,33 @@ export const infoData = {
 	Name: "Michael Airola",
 	Email: 'me@michaelairola.com',
 	Cell: '831-210-9163',
-	Address: '119 S Voluntario St. Santa Barbrara, CA 93103'
 }
 
 export const professionalSummary =
-	`Looking for positions where I can develop useful products for important causes in a healthy work environment. I love making complex things less complex.`
-	// Current position is Business Intelligence Developer at <a href="https://www.aspirehealthplan.org/">Aspire Health Plan</a>.`;
+	`Looking for positions where I can develop useful products for important causes in a healthy work environment.`
 
 export const workXps = [
+	{
+		Name: "Technical Staff",
+		Location: "the Aerospace Organization",
+		Link: "https://aerospace.org/",
+		Time: "2022-present",
+		Bullets: [
+			`Develop satellite communication simulators to analyze government requirement satisfactions given contractor systems.`,
+			`Collaborate with government entities to develop productivity tools for managing capability assessments and tradeoffs`,
+			`Maintain and add features to internal data visualization toolings and applications.`
+		]
+	},
 	{
 		Name: "Business Intelligence Developer",
 		Location: "Aspire",
 		Link: "https://www.aspirehealthplan.org/",
-		Time: "2021-present",
+		Time: "2021-2022",
 		Bullets: [
 			`Developed, prepped, and maintained Aspire's <a target="_blank" href="https://www.precisely.com/glossary/enterprise-data-warehouse#:~:text=An%20enterprise%20data%20warehouse%20(EDW,server%20or%20in%20the%20cloud.">Enterprise Data Warehouse</a> (SQL database) for all of Aspire's business needs.`,
 			"Gathered requirements for and implemented logic for client-requested data reports.",
-			"Designed, implemented, and operated a data-extraction pipeline runner - complete with monitoring, validating, and scheduling features (operations/file system program written in C++). Used for all data file exchanges going to Aspire's business partners.",
-			"Designed, implemented, and operated a data load monitoring suite. Used for all data file loads coming from Aspire's business partners."
+			"Designed, implemented, and operated a data-extraction pipeline runner - complete with monitoring, validating, and scheduling features.",
+			"Designed, implemented, and operated a data load monitoring suite."
 		]
 	},{
 		Name: "Full Stack Engineer",
@@ -44,15 +53,27 @@ export const workXps = [
 		]
 	},
 ]
-export const skills = [
-	 `Relational database work: SQL ~ 4yrs xp.`
-	,`SQL Server Intergration Services (SSIS) projects: C++ ~ 1 yr xp.`
-	,`Data visualization work: Tableau, Python ~ 1 yr xp. R ~ 2 yrs xp.`
-	,`Website development: Javascript, LitElement, React ~ 2 yrs xp.`
-	,`Server-side engineering: GoLang, Node ~ 2 yrs xp.`
-	,`Development Operations: Linux, Git, Docker ~ 4yrs xp.`
-	,`Cloud development engineering: Docker Container/Kubernetes ~ 2 yrs xp. AWS S3 ~ 2 yrs xp.`
-	,`CI/CD pipeline engineering: Gitlab Jenkins pipelines, Google Cloud triggers, ect. ~ 2 yrs xp. `
-]
+
+const years_since = year => `${Math.abs(new Date(Date.now() - year).getUTCFullYear() - year)} yrs` 
+
+export const tools = {
+	'Python': years_since(2022),
+	'SQL': years_since(2020),
+	'Bash': years_since(2018),
+	'Javascript': years_since(2018),
+	'React': years_since(2018),
+	'GoLang': years_since(2018),
+	'Kubernetes': years_since(2018),
+	'C++': years_since(2020),
+	'JIRA': years_since(2022),
+	'GIT': years_since(2018),
+}
+export const skills = {
+	 'Backend': years_since(2018)
+	,'Frontend': years_since(2016)
+	,'Data engineering': years_since(2018)
+	,'Cloud engineering': years_since(2018)
+	,'CI/CD development': years_since(2018)
+}
 
 export const education = 'B.S. Mathematics, Physics Minor from UC Santa Barbara 2016';
