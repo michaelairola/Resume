@@ -4,4 +4,4 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/resume-259007/resume']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'resume', '--image', 'gcr.io/resume-259007/resume', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
+  args: [ 'run', 'deploy', 'resume', '--image', 'gcr.io/resume-259007/resume', '--region', 'us-central1', '--max-instances', '1']
