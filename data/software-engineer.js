@@ -44,10 +44,9 @@ export const workXps = [
 	},{
 		Name: "Full Stack Engineer",
 		Location: "Defie",
-		Link: "",//"https://defie.co/",
 		Time: "2018-2021",
 		Bullets: [
-			`Built and shipped features for an Enterprise Resource Planning (<a target="_blank" href="https://en.wikipedia.org/wiki/Enterprise_resource_planning">ERP</a>) software.`,
+			`Built and shipped features for an <a target="_blank" href="https://en.wikipedia.org/wiki/Enterprise_resource_planning">Enterprise Resource Planning (ERP) software.</a>`,
 			`Designed ~40 resource-oriented data models and oversaw their lifecycle implementations.`,
 			`Maintained and restructured large legacy codebase. From 2018 - 2021, total lines of code went from 134,244 to 43,460 (66% decrease!)`
 		]

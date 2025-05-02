@@ -11,6 +11,8 @@ import {
 } from './{{ toggle }}.js';
 
 
+const link_html = (link) => link.Link ? html`<a target="_blank" href="${link.Link}">${link.Location}</a>` : link.Location
+
 const rows = [
 	{ label: "Professional Summary", template: html`
 		<div id="professionalSummary">
@@ -23,7 +25,7 @@ const rows = [
 			<li class="xpItem">
 				<div>
 					<span class="xpName">
-					${workXp.Name} at <a target="_blank" href="${workXp.Link}">${workXp.Location}</a> 
+					${workXp.Name} at ${link_html(workXp)}
 					</span>
 					(${workXp.Time}):
 				</div>
