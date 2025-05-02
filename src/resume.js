@@ -42,7 +42,7 @@ const rows = [
 		</span>`
 	},
 	{ label: "Buzzwords", template: html`
-		<span>${Object.keys(tools).map(tool => `<b>${tool}</b>: ${tools[tool]}`).join(", ")}</span>
+		<span>${tools.map(([name, years_of_experience, href]) => `<a target="_blank" href="${href}"><b>${name}</b></a>: ${years_of_experience}`).join(", ")}</span>
 	`},
 	{ label: "Education", hideLine2: true, template: education },
 ]

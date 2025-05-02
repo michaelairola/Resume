@@ -11,7 +11,7 @@ export const linksData = new htmlObj({
 
 export const infoData = {
 	Name: "Michael Airola",
-	Email: 'me@michaelairola.com',
+	Email: '<a target="_blank" href="mailto:me@michaelairola.com">me@michaelairola.com</a>',
 	Cell: '831-210-9163',
 }
 
@@ -21,7 +21,7 @@ export const professionalSummary =
 export const workXps = [
 	{
 		Name: "Technical Staff",
-		Location: "the Aerospace Organization",
+		Location: "The Aerospace Organization",
 		Link: "https://aerospace.org/",
 		Time: "2022-present",
 		Bullets: [
@@ -55,18 +55,18 @@ export const workXps = [
 
 const years_since = year => `${Math.abs(new Date(Date.now() - year).getUTCFullYear() - year)} yrs` 
 
-export const tools = {
-	'Python': years_since(2022),
-	'SQL': years_since(2020),
-	'Bash': years_since(2018),
-	'Javascript': years_since(2018),
-	'React': years_since(2018),
-	'GoLang': years_since(2018),
-	'Kubernetes': years_since(2018),
-	'C++': years_since(2020),
-	'JIRA': years_since(2022),
-	'GIT': years_since(2018),
-}
+export const tools = [
+	['Python',			years_since(2022),	'https://www.python.org/'							],
+	['SQL',				years_since(2020),	'https://en.wikipedia.org/wiki/SQL'					],
+	['Linux/Bash',		years_since(2018),	'https://en.wikipedia.org/wiki/Bash_(Unix_shell)'	],
+	['Javascript',		years_since(2018),	'https://nextjs.org/'								],
+	['React/Next.js',	years_since(2018),	'https://react.dev/'								], 
+	['GoLang',							3,  'https://go.dev/'									],
+	['Kubernetes',		years_since(2018),	'https://kubernetes.io/'							],
+	['C++',								3,	'https://en.wikipedia.org/wiki/C%2B%2B'				],
+	['JIRA',			years_since(2022),	'https://www.atlassian.com/software/jira'			],
+	['GIT',				years_since(2018),	'https://git-scm.com/'								],
+]
 export const skills = {
 	 'Backend': years_since(2018)
 	,'Frontend': years_since(2016)
@@ -75,4 +75,4 @@ export const skills = {
 	,'CI/CD development': years_since(2018)
 }
 
-export const education = 'B.S. Mathematics, Physics Minor from UC Santa Barbara 2016';
+export const education = 'B.S. Mathematics, Physics Minor from <a target="_blank" href="https://www.math.ucsb.edu/">UC Santa Barbara</a> 2016.';
