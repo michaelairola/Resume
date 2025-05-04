@@ -5,8 +5,16 @@
     <title>Michael's Resume</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="icons/logo.png"/>
-    <!-- <script async src="https://arc.io/widget.js#XRs5uwCQwU3oDhs6JeLyH8"></script> -->
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdRFy4rAAAAAOCnwgBUYMj4Bx_8G_pJrzPejUJ8"></script>
   </head>
   <body id="entrypoint"></body>
   <script type="module" src="resume-{{ toggle }}.js"></script>
+  <script>
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute('6LdRFy4rAAAAAOCnwgBUYMj4Bx_8G_pJrzPejUJ8', {action: 'LOGIN'});
+      });
+    }
+  </script>
 </html>
